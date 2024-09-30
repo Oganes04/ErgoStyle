@@ -920,6 +920,14 @@ img {
   background-color: #252536;
 }
 
+.catalog__list ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  row-gap: clamp(26px, 2.08vw, 40px);
+}
+
 .catalog__item {
   max-width: 375px;
   width: 19.5vw;
@@ -1253,4 +1261,46 @@ img {
 
 .slider__munu-inner .swiper-scrollbar-drag {
   background: #252536 !important;
+}
+
+.advantages__list ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: stretch;
+}
+
+.advantages__list ul li {
+  flex: 1;
+}
+
+.advantages__item {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(26px, 2.08vw, 40px);
+  border: 1px solid #E8E8E8;
+}
+
+.advantages__item img {
+  margin-bottom: clamp(13px, 1.04vw, 20px);
+}
+
+.advantages__item h4 {
+  font-family: Century-Gothic-Bold;
+  font-size: var(--font-size-24);
+  margin-bottom: clamp(7px, 0.52vw, 10px);
+}
+
+.advantages__item p {
+  color: #616175;
+  line-height: 150%;
+  font-size: var(--font-size-16);
 }
