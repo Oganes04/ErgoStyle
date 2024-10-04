@@ -111,9 +111,7 @@ $(document).ready(function() {
         nextEl: ".partners-slider-next",
         prevEl: ".partners-slider-prev",
     },
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
+
       breakpoints: {
         1200: {
           spaceBetween: 13
@@ -189,3 +187,31 @@ $(document).ready(function() {
   });
 
 });
+
+
+  //=================== Вы смотрели ============
+
+  const partnersSlider = new Swiper(".wached__slider", {
+    spaceBetween: 20,
+    initialSlide: 0,
+    speed: 600,
+    slidesPerView: 'auto',
+    grabCursor: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".wached-slider-next",
+      prevEl: ".wached-slider-prev",
+  },
+
+    breakpoints: {
+      1200: {
+        spaceBetween: 13
+      }, 
+      1500: {
+        spaceBetween: 16
+      }, 
+    }
+  });
