@@ -47,6 +47,7 @@ $(document).ready(function() {
       }
     });
 
+    //=================== Слайдр галереи ============
 
     const productSlider = new Swiper('.product-silder', {
       speed: 600,
@@ -149,8 +150,8 @@ $(document).ready(function() {
       $('.faq__item').css('border', '1px solid transparent');
 
       // Находим текущий вопрос и ответ
-      var $currentAnswer = $(this).find('.faq__item-answer');
-      var $currentQuestion = $(this).find('.faq__item-question');
+      let $currentAnswer = $(this).find('.faq__item-answer');
+      let $currentQuestion = $(this).find('.faq__item-question');
     
       // Если текущий ответ виден, скроем его
       if ($currentAnswer.is(':visible')) {
@@ -186,12 +187,11 @@ $(document).ready(function() {
     }
   });
 
-});
 
 
-  //=================== Вы смотрели ============
+ //=================== Вы смотрели ============
 
-  const partnersSlider = new Swiper(".wached__slider", {
+  const wachedSlider = new Swiper(".wached__slider", {
     spaceBetween: 20,
     initialSlide: 0,
     speed: 600,
@@ -215,3 +215,196 @@ $(document).ready(function() {
       }, 
     }
   });
+
+
+//=================== Слайдре партнеров ============
+
+  const productGallery = new Swiper(".product-gallery", {
+    loop: true,
+    speed: 600,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 30,
+    // grabCursor: true,
+    navigation: {
+      nextEl: ".product-slider-next",
+      prevEl: ".product-slider-prev",
+    },
+
+    breakpoints: {
+      1200: {
+        spaceBetween: 13
+      }, 
+      1500: {
+        spaceBetween: 16
+      }, 
+    },
+    on: {
+      slideChangeTransitionStart: function () {
+      
+      },
+      transitionEnd: function () {
+          let activeSlideImgLink = this.slides[this.activeIndex].src;
+          $('.product__photo>img').attr('src', activeSlideImgLink);
+
+      },
+    },
+
+  });
+
+
+  //=================== Выбор цвета у товара ============
+  let defaultColor = $(".product__info-selector-color .product__info-selector-item input").first().attr('value');
+  $(".product__info-selector-color p span").text(defaultColor);
+
+  $(".product__info-selector-color .product__info-selector-item").on("click", function () {
+    let currentColor = $(this).find('input').attr('value');
+    $(this).parent().parent().find('p span').text(currentColor);
+  });
+
+  //=================== Выбор цвета у товара ============
+
+   let defaultСrosspiece = $(".product__info-selector-crosspiece .product__info-selector-item input").first().attr('value');
+   $(".product__info-selector-crosspiece p span").text(defaultСrosspiece);
+ 
+   $(".product__info-selector-crosspiece .product__info-selector-item").on("click", function () {
+     let currentColor = $(this).find('input').attr('value');
+     $(this).parent().parent().find('p span').text(currentColor);
+   });
+
+
+
+   //=================== Выбор характеристики товара у первого типа карточки ============
+
+
+   $('.product__full-info-tabs span').on("click", function () {
+      $('.product__full-info-tabs span').removeClass('active');
+      $(this).toggleClass('active');
+   });
+
+
+   //=================== Dropdown инструкции в карточке товара ============
+   $('.product__full-info-manual button').on("click", function () {
+
+    $('.product__full-info-manual-files').slideToggle(300);
+
+    $(this).find('svg').toggleClass('active');
+   });
+
+   $('.product__full-info-specifications').slideDown();
+   $('.product__full-info-collection').slideUp();
+
+   $('#product__full-info-tabs-specifications').on("click", function () {
+      $('.product__full-info-specifications').slideDown();
+      $('.product__full-info-collection').slideUp();
+   });
+
+   $('#product__full-info-tabs-collection').on("click", function () {
+    $('.product__full-info-specifications').slideUp();
+    $('.product__full-info-collection').slideDown();
+ });
+
+
+
+
+   
+ //=================== Слайдер "Коллекции товара" ============
+
+  const collectionSlider = new Swiper(".product-collection-slider", {
+    spaceBetween: 20,
+    initialSlide: 0,
+    speed: 600,
+    slidesPerView: 'auto',
+    grabCursor: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".product-collection-slider-next",
+      prevEl: ".product-collection-slider-prev",
+  },
+
+    breakpoints: {
+      1200: {
+        spaceBetween: 13
+      }, 
+      1500: {
+        spaceBetween: 16
+      }, 
+    }
+  });
+
+
+  
+   //=================== Анимация для иконуи "Избранное" ============
+
+   $('.favourites-icon').on("click", function () {
+      console.log('aaa');
+      $(this).toggleClass('active');
+   });
+
+
+   //=================== Меню в личерм кабинете ============
+
+   $('.account__content-item').slideUp();
+   $('.account__content-profile').slideDown();
+  //  $('.account__content-discounts').slideDown();
+   $('#profile').addClass('active');
+
+
+   $('.account aside nav ul li').on("click", function () {
+    $('.account aside nav ul li').removeClass('active');
+    $(this).addClass('active');
+    let munudId = $(this).attr('id');
+    let accountContent = '[class^="account__content-"][class$="' + munudId + '"]';
+    $('.account__content-item').slideUp();
+    $(accountContent).slideDown();
+    
+   });
+
+
+   //=================== Слайдр каталога ============
+
+   const docsSlider = new Swiper(".docs-silder", {
+    spaceBetween: 20,
+    initialSlide: 0,
+    speed: 600,
+    slidesPerView: 'auto',
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    breakpoints: {
+      1200: {
+        spaceBetween: 13
+      }, 
+      1500: {
+        spaceBetween: 16
+      }, 
+    }
+  });
+
+
+
+  //=================== Смена текста на странице оформления карты ============
+
+
+  $('.gift__card-form-info-content').slideUp();
+  $('#1').addClass('active');
+  $('.gift__card-form-info-content-1').slideDown();
+
+  $('.gift__card-form-info-swich span').on("click", function () {
+    $('.gift__card-form-info-swich span').removeClass('active');
+    $(this).addClass('active');
+
+    let munudId = $(this).attr('id');
+    let content = '[class^="gift__card-form-info-content"][class$="' + munudId + '"]';
+    $('.gift__card-form-info-content').slideUp();
+    $(content).slideDown();
+  });
+
+});
