@@ -44,6 +44,9 @@ $(document).ready(function() {
         1500: {
           spaceBetween: 16
         }, 
+        0: {
+          spaceBetween: 10
+        },
       }
     });
 
@@ -120,6 +123,9 @@ $(document).ready(function() {
         1500: {
           spaceBetween: 16
         }, 
+        0: {
+          spaceBetween: 10
+        }
       }
     });
 
