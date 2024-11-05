@@ -15401,6 +15401,10 @@ input[type=radio]:checked {
     flex-direction: column;
   }
 
+  .catalog__item-price {
+    width: fit-content;
+  }
+
   .catalog__item-price-row strong {
     font-size: var(--font-size-26);
   }
