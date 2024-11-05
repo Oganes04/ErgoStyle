@@ -14976,6 +14976,10 @@ input[type=radio]:checked {
     margin-top: clamp(6.25px, 3.3333333333vw, 20px);
   }
 
+  .main:has(.slider__munu) {
+    overflow-x: hidden;
+  }
+
   .container {
     width: 100%;
     padding: clamp(0px, 0vw, 0px) clamp(24.42px, 1.9270833333vw, 37px) clamp(0px, 0vw, 0px) clamp(24.42px, 1.9270833333vw, 37px);
