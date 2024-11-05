@@ -15400,6 +15400,22 @@ input[type=radio]:checked {
   .checkout__inner form {
     flex-direction: column;
   }
+
+  .catalog__item-price-row strong {
+    font-size: var(--font-size-26);
+  }
+
+  .catalog__item-price-row span {
+    font-size: var(--font-size-20);
+  }
+
+  .catalog__item-info {
+    padding: clamp(11.88px, 0.9375vw, 18px) clamp(9.9px, 0.78125vw, 15px) clamp(11.88px, 0.9375vw, 18px) clamp(9.9px, 0.78125vw, 15px);
+  }
+
+  .catalog__item-price > span {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) and (max-width: 1279px) {
@@ -15521,6 +15537,10 @@ input[type=radio]:checked {
 
   .catalog.executive-cabinet .catalog__list ul .catalog__item {
     width: clamp(420px, 41.015625vw, 525px);
+  }
+
+  .catalog__item-info {
+    padding: clamp(14.4px, 1.40625vw, 18px) clamp(12px, 1.171875vw, 15px) clamp(14.4px, 1.40625vw, 18px) clamp(12px, 1.171875vw, 15px);
   }
 }
 
@@ -15644,6 +15664,10 @@ input[type=radio]:checked {
   .catalog.executive-cabinet .catalog__list ul .catalog__item {
     width: clamp(307.5975px, 51.26953125vw, 525px);
   }
+
+  .catalog__item-info {
+    padding: clamp(10.5462px, 1.7578125vw, 18px) clamp(8.7885px, 1.46484375vw, 15px) clamp(10.5462px, 1.7578125vw, 18px) clamp(8.7885px, 1.46484375vw, 15px);
+  }
 }
 
 @media only screen and (max-width: 600px) and (max-width: 600px) {
@@ -15765,5 +15789,9 @@ input[type=radio]:checked {
 
   .catalog.executive-cabinet .catalog__list ul .catalog__item {
     width: clamp(164.0625px, 87.5vw, 525px);
+  }
+
+  .catalog__item-info {
+    padding: clamp(5.625px, 3vw, 18px) clamp(4.6875px, 2.5vw, 15px) clamp(5.625px, 3vw, 18px) clamp(4.6875px, 2.5vw, 15px);
   }
 }

@@ -203,10 +203,10 @@ $(document).ready(function() {
     speed: 600,
     slidesPerView: 'auto',
     grabCursor: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: false,
+    // },
     navigation: {
       nextEl: ".wached-slider-next",
       prevEl: ".wached-slider-prev",
@@ -219,6 +219,13 @@ $(document).ready(function() {
       1500: {
         spaceBetween: 16
       }, 
+      601: {
+        slidesPerView: 'auto'
+      },
+      310: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      }
     }
   });
 
