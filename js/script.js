@@ -35,7 +35,7 @@ $(document).ready(function() {
         enabled: true,
       },
       scrollbar: {
-        el: ".swiper-scrollbar",
+        el: ".swiper-scrollbar-slider-menu",
       },
       breakpoints: {
         1200: {
@@ -110,6 +110,9 @@ $(document).ready(function() {
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar-partners",
       },
       navigation: {
         nextEl: ".partners-slider-next",
@@ -207,6 +210,9 @@ $(document).ready(function() {
     //   delay: 4000,
     //   disableOnInteraction: false,
     // },
+    scrollbar: {
+      el: ".swiper-scrollbar-recommendation",
+    },
     navigation: {
       nextEl: ".wached-slider-next",
       prevEl: ".wached-slider-prev",
@@ -251,6 +257,9 @@ $(document).ready(function() {
       1500: {
         spaceBetween: 16
       }, 
+      0: {
+        spaceBetween: 5
+      }
     },
     on: {
       slideChangeTransitionStart: function () {
