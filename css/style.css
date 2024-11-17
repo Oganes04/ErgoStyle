@@ -17352,7 +17352,7 @@ input[type=radio]:checked {
   }
 
   .catalog__item-mini .catalog__item-tags {
-    position: relative;
+    position: static;
     top: 0;
     flex-direction: column;
     align-items: flex-start;
