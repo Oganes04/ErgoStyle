@@ -205,7 +205,7 @@ $(document).ready(function() {
     initialSlide: 0,
     speed: 600,
     slidesPerView: 'auto',
-    grabCursor: true,
+    // grabCursor: true,
     // autoplay: {
     //   delay: 4000,
     //   disableOnInteraction: false,
@@ -428,5 +428,83 @@ $(document).ready(function() {
     $('.gift__card-form-info-content').slideUp();
     $(content).slideDown();
   });
+
+
+
+
+
+
+
+
+
+
+  $("#burger_menu").click(function() {
+    $(this).toggleClass('open');
+    $("#catalogContentAdaptive").toggleClass("open");
+    // $("html").toggleClass("site__fixed");
+    // $("body").toggleClass("site__fixed");
+  });
+
+  $("#catalog").click(function() {
+    $(this).addClass('active');
+    // $("#room").removeClass('active');
+    $("#catalogContent").toggleClass("open");
+    $(this).find('.swich-icon').toggleClass("open");
+    $(this).find('.cross-icon').toggleClass("open");
+    // $("#room").find('.swich-icon').removeClass("open");
+    // $("#room").find('.cross-icon').removeClass("open");
+  });
+
+  // $("#room").click(function() {
+  //   $(this).toggleClass('active');
+  //   $("#catalog").removeClass('active');
+  //   $("#catalogContent").toggleClass("open");
+  //   $(this).find('.swich-icon').toggleClass("open");
+  //   $(this).find('.cross-icon').toggleClass("open");
+  //   $("#catalog").find('.swich-icon').removeClass("open");
+  //   $("#catalog").find('.cross-icon').removeClass("open");
+  // });
+
+
+  $(".catalog__item-fav").click(function() {
+      $(this).toggleClass('active');
+  });
+
+
+
+  // const minScroll = $('.header__main').offset().top;
+
+  // console.log(minScroll);
+ 
+  // $(window).on('scroll', function(e) {
+  //   let y = $(this).scrollTop();
+ 
+  //   if (y > minScroll) {
+  //     $('.header__main').addClass('fixed');
+  //   } else {
+  //     $('.header__main').removeClass('fixed');
+  //   }
+  // });
+
+
+  // const minScrollMenu = $('.catalog__menu').offset().top;
+
+  // console.log(minScroll);
+ 
+  // $(window).on('scroll', function(e) {
+  //   let y = $(this).scrollTop();
+ 
+  //   if (y > minScrollMenu) {
+  //     $('.catalog__menu').addClass('fixed');
+  //   } else {
+  //     $('.catalog__menu').removeClass('fixed');
+  //   }
+  // });
+
+
+  $("#bannerClose").click(function() {
+    $(this).parent().slideUp(300);
+  });
+
 
 });
